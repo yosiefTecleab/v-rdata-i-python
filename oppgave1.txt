@@ -1,0 +1,29 @@
+Lag et script i Python, som henter værdata for Oslo fra https://api.met.no/
+Scriptet skal vise temperaturen for Oslo for påfølgende dag, time for time.
+
+Eksempel på resultat:
+Temperatur for Oslo 13.10.2022:
+
+Kl 00:00 10 grader
+Kl 02:00  9 grader
+Kl 03:00  8 grader
+Kl 04:00  8 grader
+Kl 05:00  8 grader
+Kl 06:00  9 grader
+Kl 07:00  9 grader
+Kl 08:00 10 grader
+Kl 09:00 10 grader
+Kl 10:00 11 grader
+Kl 11:00 12 grader
+Kl 12:00 14 grader
+Kl 13:00 15 grader
+Kl 14:00 16 grader
+Kl 15:00 17 grader
+Kl 16:00 17 grader
+Kl 17:00 15 grader
+Kl 18:00 14 grader
+Kl 19:00 12 grader
+Kl 20:00 10 grader
+Kl 21:00  8 grader
+Kl 22:00  8 grader
+Kl 23:00  7 grader
