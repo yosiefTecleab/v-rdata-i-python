@@ -1,14 +1,38 @@
 import requests
+import json
 
-CLIENT_ID = ''
+CLIENT_ID = '83ff59d0-b168-4e05-88af-70d2412d2799'
 
-SOURCE_IDS_DICT = {
-    "Oslo": "sn18700",
-    "Trondheim": "sn36960",
-    "Bergen": "sn18701"
-}
+def get_source_id(place):
+    #place='tron'
 
-print('Temperatur for Oslo')
+    with open("source_id.json", "r") as file:
+        id = json.load(file)  #json
+        data = id["data"]
+
+    source_id_dict = {}
+
+    #place with the corresponding source id stored in dictionery
+    for i in range(len(data)):
+        if data[i]['@type'] == 'SensorSystem':
+            if data[i]['country'] == 'Norge':
+             source_id_dict[data[i]['name']] = data[i]['id']
+            
+
+    #some cities have more source stations ,return the first one
+    stations=[]     
+
+    for key in source_id_dict:
+      if place.upper() in key:
+        stations.append(source_id_dict[key])
+
+    return stations[0]
+
+
+
+print('Temperatur for sted, gi by navn')
+place_string=input()
+
 print('Gi dato i dd.mm.yyyy format, foreksemple 13.10.2022')
 date_string = input()
 
@@ -18,7 +42,8 @@ day, month, year = date_string.split('.')
 # Reformat the date into yyyy-mm-dd format
 DATE = f"{year}-{month}-{day}"
 
-SOURCE_ID = SOURCE_IDS_DICT["Oslo"]
+#SOURCE_ID = SOURCE_IDS_DICT["Oslo"]
+SOURCE_ID = get_source_id(place_string)
 
 print(f'Temperatur for Oslo {DATE} ')
 
@@ -39,3 +64,7 @@ for HOUR in range(24):
   output = f'Kl {hour_4digits} {hourly_temperature} grader'
 
   print(output)
+
+
+
+
