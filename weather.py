@@ -26,7 +26,7 @@ def get_source_id(place):
       if place.upper() in key:
         stations.append(source_id_dict[key])
 
-    return stations[0]
+    return stations[1]
 
 
 
