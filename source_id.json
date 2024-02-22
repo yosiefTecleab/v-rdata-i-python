@@ -143,27 +143,7 @@
       "externalIds": ["1787", "3000059"],
       "wigosId": "0-578-0-67650"
     },
-    {
-      "@type": "SensorSystem",
-      "id": "SN18269",
-      "name": "OSLO - HAUGENSTUA",
-      "shortName": "Haugenstua",
-      "country": "Norge",
-      "countryCode": "NO",
-      "geometry": {
-        "@type": "Point",
-        "coordinates": [10.9035, 59.9535],
-        "nearest": false
-      },
-      "masl": 123,
-      "validFrom": "2000-01-01T00:00:00.000Z",
-      "county": "OSLO",
-      "countyId": 3,
-      "municipality": "OSLO",
-      "municipalityId": 301,
-      "stationHolders": ["OSLO KOMMUNE, VANN- OG AVLØPSETATEN"],
-      "wigosId": "0-578-0-18269"
-    },
+
     {
       "@type": "SensorSystem",
       "id": "SN57790",
